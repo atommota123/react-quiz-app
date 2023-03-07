@@ -1,0 +1,39 @@
+.question-card-div {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.question-card-div p {
+    color: white;
+}
+
+.question-card-div h2 {
+    margin-top: 30px;
+    color: white;
+}
+
+.question-card-div .answers-area {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.answers-area button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.answers-area button:hover {
+    background-color: #bbbbbb;
+}
+
+.answers-area button:focus {
+    background-color: black;
+    color: white;
+}

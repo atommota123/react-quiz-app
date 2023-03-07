@@ -1,0 +1,23 @@
+.result-page-div {
+    width: 50vw;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.result-page-div button {
+    margin-top: 50px;
+    width: 60%;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    background-color: #7537bf;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

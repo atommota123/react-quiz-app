@@ -1,0 +1,26 @@
+.start-page-div {
+    height: 400px;
+    width: 50vw;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-page-div h1 {
+    font-weight: 700;
+}
+
+.start-page-div button {
+    margin-top: 50px;
+    width: 60%;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    background-color: #7537bf;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

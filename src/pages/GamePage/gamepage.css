@@ -1,0 +1,9 @@
+.game-page-div {
+    /* height: 400px; */
+    width: 50vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
