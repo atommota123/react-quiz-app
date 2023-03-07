@@ -42,19 +42,18 @@ export default function QuestionCard() {
 
     useEffect(() => {
         if(question) {
-            setAnswers([...question.incorrect_answers, question.correct_answer])
+            setAnswers(shuffleAnswers([...question.incorrect_answers, question.correct_answer]))
         }
     }, [question])
 
 
     return (
         <div className="question-card-div">
-            {/* <pre>{JSON.stringify(questions[currentQuestion - 1], null, 2)}</pre> */}
             <p>Question: {currentQuestion}/{questions.length}</p>
             <h2 className='question'>{question.question}</h2>
 
             <div className='answers-area'>
-                {answers && shuffleAnswers(answers).map(answer => (
+                {answers && answers.map(answer => (
                     <button disabled={disabled} onClick={() => onClickAnswer({order: currentQuestion, answer: answer})} key={answer}>{answer}</button>
                 ))}
             </div>
