@@ -12,7 +12,6 @@ export default function GamePage() {
     useEffect(() => {
         if(started) {
             getQuestionsHandle()
-            console.log("apiden veri çekildi")
         }
         
     }, [started])
