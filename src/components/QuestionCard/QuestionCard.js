@@ -10,13 +10,16 @@ export default function QuestionCard() {
 
     const [question, setQuestion] = useState(false)
     const [answers, setAnswers] = useState(false)
+    const [disabled, setDisabled] = useState(false)
 
     const navigate = useNavigate()
 
     const onClickAnswer = answer => {
         if(currentQuestion !== 10) {
+            setDisabled(true)
             nextQuestionHandle(answer)
         } else {
+            setDisabled(true)
             nextQuestionHandle(answer)
             finishQuizHandle()
             navigate('/result')
@@ -33,6 +36,7 @@ export default function QuestionCard() {
       
 
     useEffect(() => {
+        setDisabled(false)
         setQuestion(questions[currentQuestion - 1])
     }, [currentQuestion, questions])
 
@@ -51,7 +55,7 @@ export default function QuestionCard() {
 
             <div className='answers-area'>
                 {answers && shuffleAnswers(answers).map(answer => (
-                    <button onClick={() => onClickAnswer({order: currentQuestion, answer: answer})} key={answer}>{answer}</button>
+                    <button disabled={disabled} onClick={() => onClickAnswer({order: currentQuestion, answer: answer})} key={answer}>{answer}</button>
                 ))}
             </div>
             
