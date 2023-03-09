@@ -3,7 +3,12 @@ import { nextQuestion, getQuestions, startQuiz, finishQuiz } from "../store/ques
 
 
 export const getQuestionsHandle = () => {
-    store.dispatch(getQuestions())
+
+    let started = store.getState().question.started
+    
+    if(started) {
+        store.dispatch(getQuestions())
+    }
 }
 
 export const nextQuestionHandle = answer => {

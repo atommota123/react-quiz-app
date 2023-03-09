@@ -10,11 +10,8 @@ export default function GamePage() {
     const {questions, loading, started} = useSelector(state => state.question)
     
     useEffect(() => {
-        if(started) {
-            getQuestionsHandle()
-        }
-        
-    }, [started])
+        getQuestionsHandle()
+    }, [])
 
     if(!started) {
         return <Navigate to='/' />

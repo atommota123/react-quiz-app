@@ -10,14 +10,15 @@
 }
 
 
-.result-page-div button {
+.result-page-div a {
     margin-top: 50px;
     width: 60%;
     padding: 8px;
     font-size: 18px;
-    border: none;
     background-color: #7537bf;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }

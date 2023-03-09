@@ -6,20 +6,21 @@ import './resultpage.css'
 
 export default function ResultPage() {
 
-    const {finished} = useSelector(state => state.question)
+    const { finished } = useSelector(state => state.question)
     const [correct, setCorrect] = useState(0)
 
     useEffect(() => {
         setCorrect(resultHandle())
     }, [])
-    
-    if(!finished) { // finished false ise çalışacak
+
+    if (!finished) { // finished false ise çalışacak
         return <Navigate to='/' />
     }
-    
+
     return ( // finished true ise çalışacak
         <div className='result-page-div'>
-        <h1>Correct answers: {correct}</h1>
+            <h1>Correct answers: {correct}</h1>
+            <a href="/">Start again</a>
         </div>
     )
 }
